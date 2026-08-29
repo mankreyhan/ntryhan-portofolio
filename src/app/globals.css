@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0d12;
+  --foreground: #e6e9ef;
+  --section-base: #0a0d12;
+  --card: rgba(255, 255, 255, 0.04);
+  --card-border: rgba(255, 255, 255, 0.1);
+  --accent: #34d399;
+  --accent-blue: #38bdf8;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* =========================================================
+   SCROLLBAR (futuristic, thin, dengan aksen)
+========================================================= */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #07090d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #34d399, #38bdf8);
+  border-radius: 999px;
+  border: 2px solid #07090d;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #10b981, #0ea5e9);
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #34d399 #07090d;
+}
+
+/* =========================================================
+   SELECTION
+========================================================= */
+::selection {
+  background: rgba(52, 211, 153, 0.25);
+  color: #ffffff;
+}
+
+/* =========================================================
+   HERO ANIMATIONS
+========================================================= */
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.profile-bob { animation: bob 6s ease-in-out infinite; }
+
+@keyframes orbit-spin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+@keyframes orbit-spin-rev {
+  from { transform: translate(-50%, -50%) rotate(360deg); }
+  to { transform: translate(-50%, -50%) rotate(0deg); }
+}
+.profile-orbit { animation: orbit-spin 22s linear infinite; }
+.profile-orbit-rev { animation: orbit-spin-rev 34s linear infinite; }
+
+@keyframes ember {
+  0%, 100% { transform: translate(0, 0); opacity: 0.4; }
+  50% { transform: translate(3px, -18px); opacity: 1; }
+}
+@keyframes ember-2 {
+  0%, 100% { transform: translate(0, 0); opacity: 0.3; }
+  50% { transform: translate(-4px, -22px); opacity: 0.9; }
+}
+@keyframes ember-3 {
+  0%, 100% { transform: translate(0, 0); opacity: 0.3; }
+  50% { transform: translate(4px, -16px); opacity: 0.85; }
+}
+.profile-ember { animation: ember 5s ease-in-out infinite; }
+.profile-ember-2 { animation: ember-2 6s ease-in-out infinite; }
+.profile-ember-3 { animation: ember-3 7s ease-in-out infinite; }
+
+.profile-glow {
+  background: radial-gradient(
+    circle,
+    rgba(52, 211, 153, 0.35) 0%,
+    rgba(34, 211, 238, 0.18) 45%,
+    transparent 72%
+  );
+  animation: glow-pulse 4.5s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.55; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 1; transform: translate(-50%, -50%) scale(1.12); }
+}
+
+@keyframes hero-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+@keyframes hero-float-reverse {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+.hero-float { animation: hero-float 5s ease-in-out infinite; }
+.hero-float-reverse { animation: hero-float-reverse 6s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .profile-bob, .profile-orbit, .profile-orbit-rev,
+  .profile-ember, .profile-ember-2, .profile-ember-3,
+  .profile-glow, .hero-float, .hero-float-reverse {
+    animation: none;
+  }
+}
