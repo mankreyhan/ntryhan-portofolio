@@ -235,7 +235,7 @@ export default function About() {
                   </h3>
 
                   <p className="relative mt-2 text-sm leading-6 text-slate-400">
-                    Memiliki Berpengalaman dalam instalasi kelistrikan, pengukuran, pengujian, serta pemeliharaan dan pemeriksaan sistem energi terbarukan.
+                    Memiliki pengalaman dalam instalasi kelistrikan, pengukuran, pengujian, serta pemeliharaan dan pemeriksaan sistem energi terbarukan.
                   </p>
 
                   <span className="absolute bottom-6 right-6 text-lg text-slate-600 transition group-hover:text-blue-400">
