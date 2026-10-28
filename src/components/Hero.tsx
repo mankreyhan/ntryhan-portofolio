@@ -408,7 +408,7 @@ export default function Hero() {
           {/* BASED IN — kiri bawah (desktop lebih ke kiri) */}
           <div className="absolute bottom-[2%] left-0 z-30 rounded-xl border border-white/15 bg-[#0f141d]/85 px-5 py-3 shadow-lg shadow-black/50 backdrop-blur-xl lg:-left-10 lg:bottom-[10%]">
             <p className="text-[9px] uppercase tracking-[0.25em] text-slate-300">Based in</p>
-            <p className="mt-1 text-sm font-semibold text-emerald-300">Probolinggo, Jember</p>
+            <p className="mt-1 text-sm font-semibold text-emerald-300">Probolinggo</p>
             <p className="text-xs text-slate-300">East Java</p>
           </div>
 

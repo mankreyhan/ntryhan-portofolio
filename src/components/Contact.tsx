@@ -6,7 +6,7 @@ import { AnimatedText } from "@/components/motion/AnimatedText";
 
 const CONTACT = {
   email: "nugrohotryhandoko1@gmail.com",
-  whatsapp: "085330481653",
+  whatsapp: "08889739461",
   linkedin: "https://www.linkedin.com/in/nugroho-try-handoko-035980428/",
 };
 
